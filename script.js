@@ -9,6 +9,33 @@ const resultPar = document.querySelector('.input__result--text');
 const inputResult = document.querySelector('.input__result');
 const currenciesFromApi = [];
 
+///////////////////// AJAX CALLS
+
+const getResult = function () {
+  fetch(`https://api.freecurrencyapi.com/v1/latest?apikey=mVYf3xe5uMYqdf3xfmaer6pMW0ewRdBDvYJQsxIJ&base_currency=${selectionOptionsTop.value}`)
+    .then(response => response.json())
+    .then(data => {
+      printResult(data);
+    });
+};
+
+const printResult = function (data) {
+  const { data: currencyValues } = data;
+  // prettier-ignore
+  resultPar.textContent = `${inputPrice.value} ${selectionOptionsTop.value} = ${(
+    currencyValues[selectionOptionsBottom.value] * inputPrice.value
+  ).toFixed(2)} ${selectionOptionsBottom.value}`;
+  inputResult.style.display = 'block';
+};
+
+////////////////// EVENT LISTENERS
+calculateBtn.addEventListener('click', getResult);
+window.addEventListener('keypress', function (e) {
+  if (e.code === 'Enter') {
+    getResult();
+  }
+});
+
 fetch(`https://api.freecurrencyapi.com/v1/currencies?apikey=mVYf3xe5uMYqdf3xfmaer6pMW0ewRdBDvYJQsxIJ`)
   .then(response => response.json())
   .then(data => {
@@ -29,31 +56,9 @@ fetch(`https://api.freecurrencyapi.com/v1/currencies?apikey=mVYf3xe5uMYqdf3xfmae
     optionEUR.setAttribute('selected', '');
   });
 
+///// Change values of two select elements
 arrowsBtn.addEventListener('click', function () {
   const symbolsArr = [selectionOptionsTop.value, selectionOptionsBottom.value];
   selectionOptionsTop.value = symbolsArr[1];
   selectionOptionsBottom.value = symbolsArr[0];
-});
-
-const printResult = function (data) {
-  const { data: currencyValues } = data;
-  // prettier-ignore
-  resultPar.textContent = `${inputPrice.value} ${selectionOptionsTop.value} = ${(
-    currencyValues[selectionOptionsBottom.value] * inputPrice.value
-  ).toFixed(2)} ${selectionOptionsBottom.value}`;
-  inputResult.style.display = 'block';
-};
-
-calculateBtn.addEventListener('click', function () {
-  fetch(
-    `https://api.freecurrencyapi.com/v1/latest?apikey=mVYf3xe5uMYqdf3xfmaer6pMW0ewRdBDvYJQsxIJ&base_currency=${selectionOptionsTop.value}`
-  )
-    .then(response => response.json())
-    .then(data => {
-      printResult(data);
-      resultPar.textContent = `${inputPrice.value} ${selectionOptionsTop.value} = ${(
-        currencyValues[selectionOptionsBottom.value] * inputPrice.value
-      ).toFixed(2)} ${selectionOptionsBottom.value}`;
-      inputResult.style.display = 'block';
-    });
 });
