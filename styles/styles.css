@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+html body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.main {
+  max-width: 1140px;
+  margin: 5rem auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.currency_converter_container {
+  background-color: #3362b3 !important;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+}
+form .currency_from_container {
+  flex-grow: 3;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+form .currency_from_container .currency_from input {
+  height: 100%;
+  border: none;
+  font-size: 2rem;
+  max-width: 20rem;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+form .currency_from_container .currency_from--selection {
+  flex: 2;
+  max-width: 40rem;
+}
+form .currency_from_container .currency_from--selection select {
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  padding: 0 1rem;
+}
+form .currency_swap {
+  background: none;
+  border: none;
+  transform: rotate(-90deg);
+}
+form .currency_to {
+  flex-grow: 2;
+  flex-shrink: 0;
+  max-width: 30rem;
+}
+form .currency_to select {
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  padding: 0 1rem;
+}
+form .currency_calculate {
+  display: flex;
+}
+form .currency_calculate button {
+  background: #000;
+  border: none;
+  color: #fff;
+  border-radius: 999999px;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 870px) {
+  .main {
+    max-width: 600px !important;
+    margin: 10rem auto;
+  }
+  .currency_converter_container {
+    min-height: 52vh !important;
+  }
+  form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  form .currency_from_container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  form .currency_from_container .currency_from {
+    text-align: center;
+  }
+  form .currency_from_container .currency_from input {
+    max-width: 50rem;
+    font-size: 3rem !important;
+    border: none;
+  }
+  form .currency_from_container .currency_from--selection {
+    width: 20rem;
+  }
+  form .currency_swap {
+    transform: none !important;
+  }
+  form .currency_to {
+    width: 20rem;
+  }
+  form .currency_calculate {
+    align-self: center;
+  }
+  form .currency_calculate button {
+    padding: 1rem 10rem !important;
+  }
+  .currency_output_container {
+    margin-top: 22rem !important;
+  }
+  .disclaimer {
+    margin-top: 5rem !important;
+    display: none;
+  }
+}
+.main h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.2rem;
+  margin-bottom: 2rem;
+  color: #3362b3;
+}
+.main p {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+  color: #7499d8;
+}
+
+.currency_converter_container {
+  min-height: 50vh;
+}
+.currency_converter_container .currency_converter {
+  margin-top: 2rem;
+  padding: 7rem 1.5rem;
+}
+.currency_converter_container .currency_converter h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.currency_converter_container .currency_converter p {
+  text-align: center;
+}
+
+.currency_output_container {
+  margin-top: 5rem;
+}
+.currency_output_container .currency_output {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.disclaimer {
+  margin-top: 5rem;
+}
+.disclaimer p {
+  font-size: 1.2rem;
+  color: #fff;
+  max-width: 75%;
+  margin: 3rem auto;
+  letter-spacing: 0.1rem;
+}
+
+.registration {
+  margin-top: 5rem;
+  text-align: center;
+}
+.registration p {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.registration button {
+  font-weight: bolder;
+  background: #000;
+  border: none;
+  color: #fff;
+  border-radius: 999999px;
+  font-size: 2rem;
+  padding: 2rem 6rem;
+  font-family: inherit;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

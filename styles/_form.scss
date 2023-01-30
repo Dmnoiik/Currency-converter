@@ -1,0 +1,58 @@
+form {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+
+  .currency_from_container {
+    flex-grow: 3;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    .currency_from {
+      input {
+        height: 100%;
+        border: none;
+        font-size: 2rem;
+        max-width: 20rem;
+        padding: 0 1rem;
+        overflow: hidden;
+      }
+    }
+
+    .currency_from--selection {
+      flex: 2;
+      max-width: 40rem;
+
+      select {
+        @include select-style;
+      }
+    }
+  }
+
+  .currency_swap {
+    background: none;
+    border: none;
+    transform: rotate(-90deg);
+  }
+
+  .currency_to {
+    flex-grow: 2;
+    flex-shrink: 0;
+    max-width: 30rem;
+    select {
+      @include select-style;
+    }
+  }
+
+  .currency_calculate {
+    display: flex;
+
+    button {
+      @include btn(1rem, 2rem);
+    }
+  }
+}

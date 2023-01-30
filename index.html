@@ -4,43 +4,100 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
     <script defer src="script.js"></script>
-
     <title>Document</title>
   </head>
   <body>
     <main class="main">
-      <div class="converter__container">
-        <div class="flex__left">
-          <div class="input__price">
-            <input type="number" id="price" placeholder="Wpisz kwotę" />
+      <h1>
+        UZYSKAJ NAJNOWSZE KURSY DZIĘKI NASZEMU KALKULATOROWI KURSÓW WALUTOWYCH
+      </h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur eum
+        non ratione dolorum ullam eaque rem reprehenderit distinctio tempore
+        neque quos, nostrum enim obcaecati voluptatem architecto. Aliquid nisi
+      </p>
+      <div class="currency_converter_container">
+        <div class="currency_converter">
+          <div class="head">
+            <h1>Currency converter</h1>
+            <p>
+              Convert your money <span>easily</span> and <span>fast</span>.
+              There is nothing easier!
+            </p>
           </div>
-          <div class="input__result">
-            <p class="input__result--text">blabla</p>
+          <form action="/">
+            <div class="currency_from_container">
+              <div class="currency_from">
+                <input
+                  type="number"
+                  class="currency_from--input-text"
+                  placeholder="100"
+                />
+              </div>
+              <div class="currency_from--selection">
+                <select name="currencies_from" id="currency_from">
+                  <option value=""></option>
+                </select>
+              </div>
+            </div>
+            <button class="currency_swap">
+              <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg
+                width="50px"
+                height="50px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+              >
+                <path
+                  stroke="#000000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 17l3 3m0 0l3-3m-3 3V4m3 3l-3-3m0 0L9 7"
+                />
+              </svg>
+            </button>
+            <div class="currency_to">
+              <select name="currencies_from" id="currency_to">
+                <option value=""></option>
+              </select>
+            </div>
+            <div class="currency_calculate">
+              <button class="currency__calculate--btn">Calcuate</button>
+            </div>
+          </form>
+
+          <div class="currency_output_container hidden">
+            <div class="currency_output">
+              <div class="currency_output_from">
+                <span class="currency_output_from--sign">#</span
+                ><span class="currency_output_from--base">1</span>
+              </div>
+              <span>=</span>
+              <div class="currency_output_to">
+                <span class="currency_output_to--sign">$</span
+                ><span class="currency_output_to--result">1</span>
+              </div>
+            </div>
+            <div class="registration">
+              <p>Want to calculate money faster?</p>
+              <button>Sign up</button>
+            </div>
+            <div class="currency_rate"></div>
           </div>
-          <div class="input__calculate">
-            <button class="btn btn__calculate">Przelicz</button>
-          </div>
-        </div>
-        <div class="flex__right">
-          <div class="currency__selection">
-            <select name="currencies" id="currency__to__send">
-              <option value=""></option>
-            </select>
-          </div>
-          <button class="arrows">
-            <svg class="icon__arrows" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
-              <path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17l3 3m0 0l3-3m-3 3V4m3 3l-3-3m0 0L9 7" />
-            </svg>
-          </button>
-          <div class="currency__receive">
-            <select name="currencies" id="currency__to_get">
-              <option value=""></option>
-            </select>
+          <div class="disclaimer">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates vel sed quaerat placeat illo maiores numquam pariatur
+              Voluptates vel sed quaerat placeat illo maiores numquam pariatur
+              Voluptates vel sed quaerat placeat illo maiores numquam pariatur
+              beatae explicabo perferendis ipsam adipisci et esse eum, enim
+              cupiditate id. Esse, excepturi. Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit.
+            </p>
           </div>
         </div>
       </div>
