@@ -92,7 +92,7 @@ form .currency_calculate button {
     margin: 10rem auto;
   }
   .currency_converter_container {
-    min-height: 52vh !important;
+    min-height: 55vh !important;
   }
   form {
     flex-direction: column;
